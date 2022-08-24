@@ -573,19 +573,20 @@ Flutter 也提供了一套丰富的 Cupertino 风格的组件，尽管目前还�
 //导入cupertino  widget 库
 import 'package:flutter/cupertino.dart';
 
-class CupertinoTestRoute extends StatelessWidget  {
+class CupertinoTestRoute extends StatelessWidget {
+  const CupertinoTestRoute({Key? key}) : super(key: key);
+
   @override
-  widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text("Cupertino Demo"),
       ),
       child: Center(
         child: CupertinoButton(
             color: CupertinoColors.activeBlue,
-            child: Text("Press"),
-            onPressed: () {}
-        ),
+            child: const Text("Press"),
+            onPressed: () {}),
       ),
     );
   }
